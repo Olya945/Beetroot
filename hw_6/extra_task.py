@@ -72,7 +72,7 @@ def greet(name):
 # Example 10: Variable Naming Conventions
 firstName = 'John'
 LastName = 'Doe'
-AGE = 30
+age = 30
 _private_var = 'This is a private variable'
 
 # Example 11: Class Naming Conventions
