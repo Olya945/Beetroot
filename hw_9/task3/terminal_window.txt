@@ -1,0 +1,14 @@
+❯ cd /Users/antonpetrenko/Python_Beetroot/hw_9/task3
+❯ python
+Python 3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import mymod
+>>> mymod.test('test.txt')
+File: test.txt
+Number of lines: 3
+Number of chars: 37
+>>> mymod.test('mymod.py')
+File: mymod.py
+Number of lines: 26
+Number of chars: 560
+>>> 

@@ -1,0 +1,63 @@
+Last login: Tue Oct  7 16:14:54 on ttys035
+Agent pid 27053
+Identity added: /Users/antonpetrenko/.ssh/mantr (antonpetrenko@MacBook-Air-Anton.local)
+❯ python3
+Python 3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> for path in sys.path:
+...     print(path)
+...     
+
+/opt/anaconda3/lib/python313.zip
+/opt/anaconda3/lib/python3.13
+/opt/anaconda3/lib/python3.13/lib-dynload
+/opt/anaconda3/lib/python3.13/site-packages
+/opt/anaconda3/lib/python3.13/site-packages/aeosa
+>>> sys.path.append('/Users/antonpetrenko/Python_Beetroot/hw_9/task2/first_test_fo\
+lder')
+>>> sys.path.insert(0,'/Users/antonpetrenko/Python_Beetroot/hw_9/task2/second_test\
+_folder')
+>>> for path in sys.path:
+...     print(path)
+...     
+/Users/antonpetrenko/Python_Beetroot/hw_9/task2/second_test_folder
+
+/opt/anaconda3/lib/python313.zip
+/opt/anaconda3/lib/python3.13
+/opt/anaconda3/lib/python3.13/lib-dynload
+/opt/anaconda3/lib/python3.13/site-packages
+/opt/anaconda3/lib/python3.13/site-packages/aeosa
+/Users/antonpetrenko/Python_Beetroot/hw_9/task2/first_test_folder
+>>> import hello
+>>> hello.hello()
+Hello from my_second_test_folder
+>>> sys.path.remove('/Users/antonpetrenko/Python_Beetroot/hw_9/task2/second_test_f\
+older')
+>>> sys.path.append('/Users/antonpetrenko/Python_Beetroot/hw_9/task2/second_test_f\
+older')
+>>> for path in sys.path:
+...     print(path)
+...     
+
+/opt/anaconda3/lib/python313.zip
+/opt/anaconda3/lib/python3.13
+/opt/anaconda3/lib/python3.13/lib-dynload
+/opt/anaconda3/lib/python3.13/site-packages
+/opt/anaconda3/lib/python3.13/site-packages/aeosa
+/Users/antonpetrenko/Python_Beetroot/hw_9/task2/first_test_folder
+/Users/antonpetrenko/Python_Beetroot/hw_9/task2/second_test_folder
+>>> hello.hello()
+Hello from my_second_test_folder
+>>> importlib.reload(hello)
+Traceback (most recent call last):
+  File "<python-input-11>", line 1, in <module>
+    importlib.reload(hello)
+    ^^^^^^^^^
+NameError: name 'importlib' is not defined. Did you forget to import 'importlib'?
+>>> import importlib
+>>> importlib.reload(hello)
+<module 'hello' from '/Users/antonpetrenko/Python_Beetroot/hw_9/task2/first_test_folder/hello.py'>
+>>> hello.hello()
+Hello from my_first_test_folder
+>>> 
