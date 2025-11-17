@@ -1,30 +1,3 @@
-"""Phonebook application;
-Functionality:
-    - Add data into database
-    - Delete data from database by id
-    - Find contact by:
-        - name
-        - phone number
-    - Update contact
-    - List all contacts
-
-Data format:
-    - id
-    - phone number
-    - name
-    - city
-
-DATABASE_FORMAT_EXAMPLE:
-{
-  "contacts": [
-      {
-          "phone_number": 123,
-          "name": "",
-          "city": ""
-      },
-    ]
-}
-"""
 import os
 import json
 
@@ -74,15 +47,12 @@ def add_contact(db_name):
 # contact update
 def validate_phone(phone):
     if not phone:
-        print('\nYou did not enter a phone number. Try again.')
-        return False
+        return (False, 'You did not enter a phone number. Try again.')
     if not phone.isdigit():
-        print('\nThe phone number must contain only digits. Try again.')
-        return False
+        return (False, 'The phone number must contain only digits. Try again.')
     if len(phone) != 10:
-        print('\nThe phone number must contain 10 digits. Try again.')
-        return False
-    return True
+        return (False, 'The phone number must contain 10 digits. Try again.')
+    return (True, 'Valid phone number.')
 
 
 def update_contact(db_name):
@@ -97,8 +67,13 @@ def update_contact(db_name):
             if phone_number.lower() == 'q':
                 print("\nUpdate canceled.")
                 return
-            if validate_phone(phone_number):
+            
+            is_valid, message = validate_phone(phone_number)
+            if is_valid:
                 phone_valid = True
+            
+            else:
+                print(message)
 
         for entry in db["contacts"]:
             if entry["number"] == phone_number:
@@ -113,8 +88,11 @@ def update_contact(db_name):
 
                 new_number = input("\nEnter a new phone number or press Enter to keep the same: ").strip()
                 if new_number:
-                    if not validate_phone(new_number):
+                    is_valid, message = validate_phone(new_number)
+                    if not is_valid:
+                        print(message)
                         return
+        
                     for c in db["contacts"]:
                         if c["number"] == new_number and c is not entry:
                             print("\nA contact with this number already exists. Update canceled.")
