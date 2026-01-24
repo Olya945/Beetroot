@@ -1,96 +1,127 @@
 """База даних змішування кольорів"""
 
+# ============== КОНСТАНТИ КОЛЬОРІВ ==============
+
+# Первинні кольори
+RED = "червоний"
+BLUE = "синій"
+YELLOW = "жовтий"
+WHITE = "білий"
+BLACK = "чорний"
+
+# Вторинні кольори
+ORANGE = "помаранчевий"
+GREEN = "зелений"
+PURPLE = "фіолетовий"
+
+# Відтінки
+PINK = "рожевий"
+LIGHT_BLUE = "блакитний"
+MINT = "м'ятний"
+LAVENDER = "лавандовий"
+PEACH = "персиковий"
+TURQUOISE = "бірюзовий"
+
+# Складні кольори
+BROWN = "коричневий"
+DARK_BROWN = "темно-коричневий"
+OLIVE = "оливковий"
+TERRACOTTA = "теракотовий"
+GRAY = "сірий"
+WARM_GRAY = "теплий сірий"
+
+# ============== РЕЦЕПТИ ==============
 RECIPES = [
     {
-        "result": "помаранчевий",
-        "ingredients": ["жовтий", "червоний"],
+        "result": ORANGE,
+        "ingredients": [YELLOW, RED],
         "proportions": "1:1"
     },
     {
-        "result": "зелений",
-        "ingredients": ["жовтий", "синій"],
+        "result": GREEN,
+        "ingredients": [YELLOW, BLUE],
         "proportions": "1:1"
     },
     {
-        "result": "фіолетовий",
-        "ingredients": ["синій", "червоний"],
+        "result": PURPLE,
+        "ingredients": [BLUE, RED],
         "proportions": "1:1"
     },
     {
-        "result": "рожевий",
-        "ingredients": ["червоний", "білий"],
+        "result": PINK,
+        "ingredients": [RED, WHITE],
         "proportions": "1:3"
     },
     {
-        "result": "блакитний",
-        "ingredients": ["синій", "білий"],
+        "result": LIGHT_BLUE,
+        "ingredients": [BLUE, WHITE],
         "proportions": "1:2"
     },
     {
-        "result": "м'ятний",
-        "ingredients": ["зелений", "білий"],
+        "result": MINT,
+        "ingredients": [GREEN, WHITE],
         "proportions": "1:1"
     },
     {
-        "result": "лавандовий",
-        "ingredients": ["фіолетовий", "білий"],
+        "result": LAVENDER,
+        "ingredients": [PURPLE, WHITE],
         "proportions": "1:1"
     },
     {
-        "result": "персиковий",
-        "ingredients": ["помаранчевий", "білий"],
+        "result": PEACH,
+        "ingredients": [ORANGE, WHITE],
         "proportions": "1:1"
     },
     {
-        "result": "бірюзовий",
-        "ingredients": ["синій", "зелений"],
+        "result": TURQUOISE,
+        "ingredients": [BLUE, GREEN],
         "proportions": "1:1"
     },
     {
-        "result": "коричневий",
-        "ingredients": ["червоний", "зелений"],
+        "result": BROWN,
+        "ingredients": [RED, GREEN],
         "proportions": "1:1"
     },
     {
-        "result": "темно-коричневий",
-        "ingredients": ["фіолетовий", "жовтий"],
+        "result": DARK_BROWN,
+        "ingredients": [PURPLE, YELLOW],
         "proportions": "1:1"
     },
     {
-        "result": "оливковий",
-        "ingredients": ["зелений", "жовтий"],
+        "result": OLIVE,
+        "ingredients": [GREEN, YELLOW],
         "proportions": "2:1"
     },
     {
-        "result": "теракотовий",
-        "ingredients": ["коричневий", "помаранчевий"],
+        "result": TERRACOTTA,
+        "ingredients": [BROWN, ORANGE],
         "proportions": "1:1"
     },
     {
-        "result": "сірий",
-        "ingredients": ["чорний", "білий"],
+        "result": GRAY,
+        "ingredients": [BLACK, WHITE],
         "proportions": "1:1"
     },
     {
-        "result": "теплий сірий",
-        "ingredients": ["жовтий", "фіолетовий"],
+        "result": WARM_GRAY,
+        "ingredients": [YELLOW, PURPLE],
         "proportions": "1:2"
     },
     {
-        "result": "чорний",
-        "ingredients": ["червоний", "синій", "жовтий"],
+        "result": BLACK,
+        "ingredients": [RED, BLUE, YELLOW],
         "proportions": "1:1:1"
     },
     {
-        "result": "чорний",
-        "ingredients": ["коричневий", "синій"],
+        "result": BLACK,
+        "ingredients": [BROWN, BLUE],
         "proportions": "2:1"
     },
     {
-        "result": "чорний",
-        "ingredients": ["фіолетовий", "коричневий"],
+        "result": BLACK,
+        "ingredients": [PURPLE, BROWN],
         "proportions": "1:1"
     }
 ]
 
-PRIMARY_COLORS = ["червоний", "синій", "жовтий", "білий"]
+PRIMARY_COLORS = [RED, BLUE, YELLOW, WHITE]
