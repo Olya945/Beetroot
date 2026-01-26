@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Color, Recipe
 
+def home(request):
+    return render(request, "colors/home.html")
+
 def color_list(request):
     """Показує список всіх кольорів"""
     colors = Color.objects.all().order_by("name")

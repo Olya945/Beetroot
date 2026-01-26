@@ -1,0 +1,22 @@
+{% extends 'colors/base.html' %}
+
+{% block content %}
+    <div style="text-align: center; padding: 50px 20px;">
+        <h1 style="font-size: 3em; color: #333; margin-bottom: 20px;">🎨 Змішувач Кольорів</h1>
+        <p style="font-size: 1.3em; color: #666; margin-bottom: 50px;">Навчальний інструмент для дітей про змішування кольорів</p>
+        
+        <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; max-width: 900px; margin: 0 auto;">
+            <a href="{% url 'all_colors' %}" style="display: block; width: 250px; padding: 40px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 15px; font-size: 1.4em; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                🎨<br>Всі кольори
+            </a>
+            
+            <a href="{% url 'recipes' %}" style="display: block; width: 250px; padding: 40px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); color: white; text-decoration: none; border-radius: 15px; font-size: 1.4em; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                📖<br>Рецепти
+            </a>
+            
+            <a href="{% url 'mix_search' %}" style="display: block; width: 250px; padding: 40px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; text-decoration: none; border-radius: 15px; font-size: 1.4em; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                🔍<br>Що можу змішати?
+            </a>
+        </div>
+    </div>
+{% endblock %}
